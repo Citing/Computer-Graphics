@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ellipse</title>
+  <script id="vShader" type="x-shader/x-vertex">
+    attribute vec2 position;
+    void main()
+    {
+      gl_Position = vec4(position, 0.0, 1.0);
+    }
+  </script>
+  <script id="fShader" type="x-shader/x-fragment">
+    precision mediump float;
+    uniform vec3 color;
+    void main()
+    {
+      gl_FragColor = vec4(color, 1.0);
+    }
+  </script>
+  <script type="text/javascript" src="points.js"></script>
+  <script type="text/javascript" src="Korea.js"></script>
+</head>
+<style>
+  body {
+    background-color: #aaaaaa;
+  }
+</style>
+<body onload="main()">
+  <canvas id="gl-canvas" width="600" height="400"></canvas>
+</body>
+</html>
